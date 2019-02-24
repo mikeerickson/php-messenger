@@ -1,6 +1,7 @@
 {
     "name": "codedungeon/php-messenger",
-    "description": "PHP Console library for creating console messages\"",
+    "version": "0.0.1",
+    "description": "PHP library for creating console messages",
     "type": "library",
     "require": {
         "codedungeon/php-cli-colors": "^1.10"
@@ -15,5 +16,14 @@
             "name": "Mike Erickson",
             "email": "codedungeon@gmail.com"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "Codedungeon\\PHPMessenger\\": "src/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit --colors=always",
+        "test-unit": "vendor/bin/phpunit --colors=always --testsuite=Unit"
+    }
 }

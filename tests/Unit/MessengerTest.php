@@ -1,6 +1,6 @@
 <?php
 
-use Codedungeon\PHPUnitPrettyResultPrinter\Printer;
+use Codedungeon\PHPMessenger\Messenger;
 
 /**
  *  Corresponding Class to test Printer class.
@@ -12,73 +12,34 @@ class MessengerTest extends PHPUnit\Framework\TestCase
     /**
      * @var
      */
-    protected $printer;
+    protected $messenger;
 
     public function setUp():void
     {
-        $this->printer = new Printer();
+        $this->messenger = new Messenger();
     }
 
     /** @test */
     public function should_return_module_package_name(): void
     {
-        $this->assertSame('PHPUnit Pretty Result Printer', $this->printer->packageName());
+        $this->assertSame('PHP library for creating console messages', $this->messenger->packageName());
     }
 
     /** @test */
     public function should_return_full_pathname_to_config_file(): void
     {
-        $this->assertStringContainsString('phpunit-printer.yml', $this->printer->getConfigurationFile());
-        $this->assertFileExists($this->printer->getConfigurationFile());
+        $this->assertStringContainsString('php-messenger.yml', $this->messenger->getConfigurationFile());
+
+        $this->assertFileExists($this->messenger->getConfigurationFile());
     }
 
-    /** @skip */
-    public function should_use_configuration_file(): void
+    /** @test  */
+    public function should_return_package_version()
     {
-        $this->assertStringContainsString('phpunit-printer.yml', $this->printer->getConfigurationFile());
-        $this->assertFileExists($this->printer->getConfigurationFile());
+        $version = $this->messenger->version();
+
+        $this->assertRegExp("/^(\d+\.)?(\d+\.)?(\*|\d+)$/",$version);
+
     }
 
-    /** @skip  */
-    public function should_throw_an_error()
-    {
-        // this is toggled to assure failure testing and reporting
-        $this->assertTrue(true);
-    }
-
-    /** @skip  */
-    public function should_fail()
-    {
-        $this->assertTrue(false);
-    }
-
-    /** @skip  */
-    public function should_fail_again()
-    {
-        $this->assertTrue(false);
-    }
-
-    /** @skip  */
-    public function should_skip()
-    {
-        $this->markTestSkipped();
-    }
-
-    /** @skip  */
-    public function should_skip_another()
-    {
-        $this->markTestSkipped();
-    }
-
-    /** @skip  */
-    public function should_be_incomplete()
-    {
-        $this->markTestIncomplete();
-    }
-
-    /** @skip  */
-    public function should_be_risky()
-    {
-        $this->markAsRisky();
-    }
 }
