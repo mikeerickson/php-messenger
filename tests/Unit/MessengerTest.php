@@ -1,5 +1,6 @@
 <?php
 
+use Codedungeon\PHPCliColors\Color;
 use Codedungeon\PHPMessenger\Messenger;
 
 /**
@@ -14,9 +15,14 @@ class MessengerTest extends PHPUnit\Framework\TestCase
      */
     protected $messenger;
 
+    protected $colors;
+
+
     public function setUp(): void
     {
         $this->messenger = new Messenger();
+
+        $this->colors = new Color();
     }
 
     /** @test */
@@ -47,7 +53,7 @@ class MessengerTest extends PHPUnit\Framework\TestCase
     {
         $msg = $this->messenger->log("log", "");
 
-        $this->assertEquals("log", $msg);
+        $this->assertEquals($this->colors->white() . "log" . $this->colors->reset(), $msg);
     }
 
     /** @test */
@@ -123,12 +129,28 @@ class MessengerTest extends PHPUnit\Framework\TestCase
         $this->assertEquals("label error", $msg);
     }
 
-    /** @test */
+    /**
+     * @test
+     * @group color
+     */
     public function should_display_success_message()
     {
         $msg = $this->messenger->success("success", "");
 
-        $this->assertEquals("success", $msg);
+        $expect = $this->colors::GREEN . "success" . $this->colors::RESET;
+        $this->assertEquals($expect, $msg);
+    }
+
+    /** @test
+     * @group color
+     */
+    public function should_display_success_message_and_label()
+    {
+        $msg = $this->messenger->success("success", "label");
+
+
+        $expect = $this->colors::BG_GREEN . " label " . $this->colors->green() . " success" . $this->colors::RESET;
+        $this->assertEquals($expect, $msg);
     }
 
     /** @test */
@@ -140,6 +162,14 @@ class MessengerTest extends PHPUnit\Framework\TestCase
     }
 
     /** @test */
+    public function should_display_warning_message_and_label()
+    {
+        $msg = $this->messenger->warning("warning", "label");
+
+        $this->assertEquals("label warning", $msg);
+    }
+
+    /** @test */
     public function should_display_warn_message()
     {
         $msg = $this->messenger->warn("warn", "");
@@ -148,10 +178,26 @@ class MessengerTest extends PHPUnit\Framework\TestCase
     }
 
     /** @test */
+    public function should_display_warn_message_and_label()
+    {
+        $msg = $this->messenger->warn("warn", "label");
+
+        $this->assertEquals("label warn", $msg);
+    }
+
+    /** @test */
     public function should_display_important_message()
     {
         $msg = $this->messenger->important("important", "");
 
         $this->assertEquals("important", $msg);
+    }
+
+    /** @test */
+    public function should_display_important_message_and_label()
+    {
+        $msg = $this->messenger->important("important", "label");
+
+        $this->assertEquals("label important", $msg);
     }
 }

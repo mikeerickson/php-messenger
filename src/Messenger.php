@@ -90,9 +90,21 @@ class Messenger
         }
     }
 
+
     public function isTesting($key = "APP_ENV")
     {
         return $_ENV[$key] === "testing";
+    }
+
+    private function get_color($msgType = "", $colorType = "fg")
+    {
+        switch ($msgType) {
+            case "success":
+                $color = $colorType === "bg" ? $this->colors::BG_GREEN : $this->colors::GREEN;
+                break;
+        }
+
+        return $color;
     }
 
     // -------------------------------------------------------------------------------------
@@ -102,9 +114,10 @@ class Messenger
     public function build_message($type = "log", $msg = "", $label = "")
     {
         if (strlen($label) > 0) {
-            return $label . " " . $msg;
+            return $this->get_color($type,
+                    "bg") . " " . $label . " " . $this->get_color($type, "fg") . " " . $msg . $this->colors::RESET;
         } else {
-            return $msg;
+            return $this->get_color($type, "fg") . $msg . $this->colors::RESET;
         }
     }
 

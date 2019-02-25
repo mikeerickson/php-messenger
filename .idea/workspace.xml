@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdc4c822-f0b9-4564-9042-5c82fb3bb5b1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php-messenger.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php-messenger.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.phpunit.result.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.phpunit.result.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Messenger.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Messenger.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/HeartbeatTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/HeartbeatTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/.phpunit.result.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/.phpunit.result.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Unit/MessengerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/MessengerTest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,7 +34,7 @@
             <entry file="file://$PROJECT_DIR$/tests/Unit/MessengerTest.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="227">
-                  <caret line="44" column="16" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
+                  <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
                   <folding>
                     <element signature="n#setUp#0;n#MessengerTest#0;n#!!top" expanded="true" />
                     <element signature="n#should_return_module_package_name#0;n#MessengerTest#0;n#!!top" expanded="true" />
@@ -42,35 +44,34 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Messenger.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="251">
-                  <caret line="191" column="1" lean-forward="true" selection-start-line="191" selection-start-column="1" selection-end-line="191" selection-end-column="1" />
+                <state relative-caret-position="132">
+                  <caret line="102" column="88" selection-start-line="102" selection-start-column="88" selection-end-line="102" selection-end-column="88" />
                   <folding>
-                    <element signature="e#146#3101#0#PHP" expanded="true" />
                     <element signature="e#178#220#0#PHP" expanded="true" />
                     <element signature="e#2134#2220#0#PHP" expanded="true" />
-                    <element signature="e#2348#2555#0#PHP" expanded="true" />
-                    <element signature="e#2561#2714#0#PHP" expanded="true" />
-                    <element signature="e#2720#2776#0#PHP" expanded="true" />
-                    <element signature="e#2782#2839#0#PHP" expanded="true" />
-                    <element signature="e#2845#2905#0#PHP" expanded="true" />
-                    <element signature="e#2911#2968#0#PHP" expanded="true" />
-                    <element signature="e#2974#3033#0#PHP" expanded="true" />
-                    <element signature="e#3039#3098#0#PHP" expanded="true" />
-                    <element signature="e#3104#3160#0#PHP" expanded="true" />
-                    <element signature="e#3166#3227#0#PHP" expanded="true" />
+                    <element signature="e#2704#3075#0#PHP" expanded="true" />
+                    <element signature="e#3081#3283#0#PHP" expanded="true" />
+                    <element signature="e#3289#3493#0#PHP" expanded="true" />
+                    <element signature="e#3499#3705#0#PHP" expanded="true" />
+                    <element signature="e#3711#3923#0#PHP" expanded="true" />
+                    <element signature="e#3929#4135#0#PHP" expanded="true" />
+                    <element signature="e#4141#4351#0#PHP" expanded="true" />
+                    <element signature="e#4357#4567#0#PHP" expanded="true" />
+                    <element signature="e#4573#4777#0#PHP" expanded="true" />
+                    <element signature="e#4783#4997#0#PHP" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/tests/HeartbeatTest.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="288">
-                  <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+                  <caret line="12" selection-start-line="12" selection-end-line="12" />
                   <folding>
                     <element signature="n#HeartbeatTest#0;n#!!top" expanded="true" />
                     <element signature="n#should_pass_heartbeat_test#0;n#HeartbeatTest#0;n#!!top" expanded="true" />
@@ -86,9 +87,10 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/tests/Unit/MessengerTest.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="323">
-                  <caret line="122" column="35" selection-start-line="122" selection-start-column="35" selection-end-line="122" selection-end-column="35" />
+                <state relative-caret-position="296">
+                  <caret line="142" lean-forward="true" selection-start-line="142" selection-end-line="142" />
                   <folding>
+                    <element signature="e#7#42#0#PHP" expanded="true" />
                     <element signature="n#setUp#0;n#MessengerTest#0;n#!!top" expanded="true" />
                     <element signature="n#should_return_module_package_name#0;n#MessengerTest#0;n#!!top" expanded="true" />
                     <element signature="n#should_display_log_message#0;n#MessengerTest#0;n#!!top" expanded="true" />
@@ -101,9 +103,14 @@
                     <element signature="n#should_display_critical_message#1;n#MessengerTest#0;n#!!top" expanded="true" />
                     <element signature="n#should_display_critical_message#1;n#MessengerTest#0;n#!!top" expanded="true" />
                     <element signature="n#should_display_error_message#1;n#MessengerTest#0;n#!!top" expanded="true" />
-                    <element signature="n#should_display_success_message#1;n#MessengerTest#0;n#!!top" expanded="true" />
-                    <element signature="n#should_display_warning_message#1;n#MessengerTest#0;n#!!top" expanded="true" />
-                    <element signature="n#should_display_warn_message#1;n#MessengerTest#0;n#!!top" expanded="true" />
+                    <element signature="n#should_display_error_message#1;n#MessengerTest#0;n#!!top" expanded="true" />
+                    <element signature="n#should_display_success_message_and_label#0;n#MessengerTest#0;n#!!top" expanded="true" />
+                    <element signature="n#should_display_warning_message#0;n#MessengerTest#0;n#!!top" expanded="true" />
+                    <element signature="n#should_display_warning_message_and_label#0;n#MessengerTest#0;n#!!top" expanded="true" />
+                    <element signature="n#should_display_warn_message#0;n#MessengerTest#0;n#!!top" expanded="true" />
+                    <element signature="n#should_display_warn_message_and_label#0;n#MessengerTest#0;n#!!top" expanded="true" />
+                    <element signature="n#should_display_important_message#0;n#MessengerTest#0;n#!!top" expanded="true" />
+                    <element signature="n#should_display_important_message_and_label#0;n#MessengerTest#0;n#!!top" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -112,6 +119,12 @@
         </leaf>
       </split-second>
     </splitter>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>success</find>
+      <find>&quot;test&quot;</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -169,6 +182,20 @@
       <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
       <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
       <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/vendor/yosymfony/resource-watcher" />
+      <path value="$PROJECT_DIR$/vendor/evenement/evenement" />
+      <path value="$PROJECT_DIR$/vendor/jolicode/jolinotif" />
+      <path value="$PROJECT_DIR$/vendor/spatie/phpunit-watcher" />
+      <path value="$PROJECT_DIR$/vendor/react/event-loop" />
+      <path value="$PROJECT_DIR$/vendor/react/stream" />
+      <path value="$PROJECT_DIR$/vendor/clue/term-react" />
+      <path value="$PROJECT_DIR$/vendor/clue/stdio-react" />
+      <path value="$PROJECT_DIR$/vendor/clue/utf8-react" />
+      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/process" />
     </include_path>
   </component>
   <component name="ProjectConfigurationFiles">
@@ -249,9 +276,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHPUnit.HeartbeatTest.should_pass_heartbeat_test">
+  <component name="RunManager" selected="PHPUnit.MessengerTest.should_display_success_message">
     <configuration name="HeartbeatTest.should_pass_heartbeat_test" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="HeartbeatTest" file="$PROJECT_DIR$/tests/HeartbeatTest.php" method="should_pass_heartbeat_test" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="MessengerTest.should_display_success_message" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="MessengerTest" file="$PROJECT_DIR$/tests/Unit/MessengerTest.php" method="should_display_success_message" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -260,6 +291,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.MessengerTest.should_display_success_message" />
         <item itemvalue="PHPUnit.HeartbeatTest.should_pass_heartbeat_test" />
       </list>
     </recent_temporary>
@@ -274,7 +306,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1551038095690</updated>
-      <workItem from="1551038098234" duration="4922000" />
+      <workItem from="1551038098234" duration="8502000" />
     </task>
     <servers />
   </component>
@@ -282,9 +314,12 @@
     <history-entry file="HeartbeatTest_should_pass_heartbeat_test - 2019.02.24 at 11h 57m 03s.xml">
       <configuration name="HeartbeatTest.should_pass_heartbeat_test" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
+    <history-entry file="MessengerTest_should_display_success_message - 2019.02.24 at 16h 38m 10s.xml">
+      <configuration name="MessengerTest.should_display_success_message" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4922000" />
+    <option name="totallyTimeSpent" value="8502000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="0" />
@@ -297,7 +332,7 @@
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32884902" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.44394618" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -330,13 +365,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
@@ -351,32 +379,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Messenger.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="191" column="1" lean-forward="true" selection-start-line="191" selection-start-column="1" selection-end-line="191" selection-end-column="1" />
-          <folding>
-            <element signature="e#146#3101#0#PHP" expanded="true" />
-            <element signature="e#178#220#0#PHP" expanded="true" />
-            <element signature="e#2134#2220#0#PHP" expanded="true" />
-            <element signature="e#2348#2555#0#PHP" expanded="true" />
-            <element signature="e#2561#2714#0#PHP" expanded="true" />
-            <element signature="e#2720#2776#0#PHP" expanded="true" />
-            <element signature="e#2782#2839#0#PHP" expanded="true" />
-            <element signature="e#2845#2905#0#PHP" expanded="true" />
-            <element signature="e#2911#2968#0#PHP" expanded="true" />
-            <element signature="e#2974#3033#0#PHP" expanded="true" />
-            <element signature="e#3039#3098#0#PHP" expanded="true" />
-            <element signature="e#3104#3160#0#PHP" expanded="true" />
-            <element signature="e#3166#3227#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/HeartbeatTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
           <folding>
             <element signature="n#HeartbeatTest#0;n#!!top" expanded="true" />
             <element signature="n#should_pass_heartbeat_test#0;n#HeartbeatTest#0;n#!!top" expanded="true" />
@@ -384,11 +390,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="11" column="45" lean-forward="true" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/codedungeon/php-cli-colors/src/Color.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="15" column="15" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="15" />
+          <folding>
+            <element signature="e#1221#1262#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Messenger.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="102" column="88" selection-start-line="102" selection-start-column="88" selection-end-line="102" selection-end-column="88" />
+          <folding>
+            <element signature="e#178#220#0#PHP" expanded="true" />
+            <element signature="e#2134#2220#0#PHP" expanded="true" />
+            <element signature="e#2704#3075#0#PHP" expanded="true" />
+            <element signature="e#3081#3283#0#PHP" expanded="true" />
+            <element signature="e#3289#3493#0#PHP" expanded="true" />
+            <element signature="e#3499#3705#0#PHP" expanded="true" />
+            <element signature="e#3711#3923#0#PHP" expanded="true" />
+            <element signature="e#3929#4135#0#PHP" expanded="true" />
+            <element signature="e#4141#4351#0#PHP" expanded="true" />
+            <element signature="e#4357#4567#0#PHP" expanded="true" />
+            <element signature="e#4573#4777#0#PHP" expanded="true" />
+            <element signature="e#4783#4997#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tests/Unit/MessengerTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="122" column="35" selection-start-line="122" selection-start-column="35" selection-end-line="122" selection-end-column="35" />
+        <state relative-caret-position="296">
+          <caret line="142" lean-forward="true" selection-start-line="142" selection-end-line="142" />
           <folding>
+            <element signature="e#7#42#0#PHP" expanded="true" />
             <element signature="n#setUp#0;n#MessengerTest#0;n#!!top" expanded="true" />
             <element signature="n#should_return_module_package_name#0;n#MessengerTest#0;n#!!top" expanded="true" />
             <element signature="n#should_display_log_message#0;n#MessengerTest#0;n#!!top" expanded="true" />
@@ -401,9 +446,14 @@
             <element signature="n#should_display_critical_message#1;n#MessengerTest#0;n#!!top" expanded="true" />
             <element signature="n#should_display_critical_message#1;n#MessengerTest#0;n#!!top" expanded="true" />
             <element signature="n#should_display_error_message#1;n#MessengerTest#0;n#!!top" expanded="true" />
-            <element signature="n#should_display_success_message#1;n#MessengerTest#0;n#!!top" expanded="true" />
-            <element signature="n#should_display_warning_message#1;n#MessengerTest#0;n#!!top" expanded="true" />
-            <element signature="n#should_display_warn_message#1;n#MessengerTest#0;n#!!top" expanded="true" />
+            <element signature="n#should_display_error_message#1;n#MessengerTest#0;n#!!top" expanded="true" />
+            <element signature="n#should_display_success_message_and_label#0;n#MessengerTest#0;n#!!top" expanded="true" />
+            <element signature="n#should_display_warning_message#0;n#MessengerTest#0;n#!!top" expanded="true" />
+            <element signature="n#should_display_warning_message_and_label#0;n#MessengerTest#0;n#!!top" expanded="true" />
+            <element signature="n#should_display_warn_message#0;n#MessengerTest#0;n#!!top" expanded="true" />
+            <element signature="n#should_display_warn_message_and_label#0;n#MessengerTest#0;n#!!top" expanded="true" />
+            <element signature="n#should_display_important_message#0;n#MessengerTest#0;n#!!top" expanded="true" />
+            <element signature="n#should_display_important_message_and_label#0;n#MessengerTest#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
