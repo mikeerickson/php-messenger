@@ -99,8 +99,32 @@ class Messenger
     private function get_color($msgType = "", $colorType = "fg")
     {
         switch ($msgType) {
+            case "log":
+                $color = $colorType === "bg" ? $this->colors::BG_WHITE : $this->colors::WHITE;
+                break;
+            case "info":
+                $color = $colorType === "bg" ? $this->colors::BG_CYAN : $this->colors::CYAN;
+                break;
+            case "debug":
+                $color = $colorType === "bg" ? $this->colors::BG_LIGHT_GRAY : $this->colors::LIGHT_GRAY;
+                break;
+            case "critical":
+                $color = $colorType === "bg" ? $this->colors::BG_RED : $this->colors::RED;
+                break;
+            case "error":
+                $color = $colorType === "bg" ? $this->colors::BG_RED : $this->colors::RED;
+                break;
             case "success":
                 $color = $colorType === "bg" ? $this->colors::BG_GREEN : $this->colors::GREEN;
+                break;
+            case "warning":
+                $color = $colorType === "bg" ? $this->colors::BG_YELLOW : $this->colors::YELLOW;
+                break;
+            case "warn":
+                $color = $colorType === "bg" ? $this->colors::BG_YELLOW : $this->colors::YELLOW;
+                break;
+            case "important":
+                $color = $colorType === "bg" ? $this->colors::BG_MAGENTA : $this->colors::MAGENTA;
                 break;
         }
 

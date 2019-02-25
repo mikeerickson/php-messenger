@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdc4c822-f0b9-4564-9042-5c82fb3bb5b1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php-messenger.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php-messenger.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.phpunit.result.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.phpunit.result.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Messenger.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Messenger.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/.phpunit.result.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/.phpunit.result.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/MessengerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/MessengerTest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,8 +40,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Messenger.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="132">
-                  <caret line="102" column="88" selection-start-line="102" selection-start-column="88" selection-end-line="102" selection-end-column="88" />
+                <state relative-caret-position="204">
+                  <caret line="127" column="22" selection-start-line="127" selection-start-column="22" selection-end-line="127" selection-end-column="22" />
                   <folding>
                     <element signature="e#178#220#0#PHP" expanded="true" />
                     <element signature="e#2134#2220#0#PHP" expanded="true" />
@@ -87,21 +80,15 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/tests/Unit/MessengerTest.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="296">
+                <state relative-caret-position="-1164">
                   <caret line="142" lean-forward="true" selection-start-line="142" selection-end-line="142" />
                   <folding>
                     <element signature="e#7#42#0#PHP" expanded="true" />
                     <element signature="n#setUp#0;n#MessengerTest#0;n#!!top" expanded="true" />
                     <element signature="n#should_return_module_package_name#0;n#MessengerTest#0;n#!!top" expanded="true" />
-                    <element signature="n#should_display_log_message#0;n#MessengerTest#0;n#!!top" expanded="true" />
-                    <element signature="n#should_display_log_message#1;n#MessengerTest#0;n#!!top" expanded="true" />
                     <element signature="n#should_display_log_message#1;n#MessengerTest#0;n#!!top" expanded="true" />
                     <element signature="n#should_display_info_message#1;n#MessengerTest#0;n#!!top" expanded="true" />
-                    <element signature="n#should_display_debug_message#0;n#MessengerTest#0;n#!!top" expanded="true" />
                     <element signature="n#should_display_debug_message#1;n#MessengerTest#0;n#!!top" expanded="true" />
-                    <element signature="n#should_display_debug_message#1;n#MessengerTest#0;n#!!top" expanded="true" />
-                    <element signature="n#should_display_critical_message#1;n#MessengerTest#0;n#!!top" expanded="true" />
-                    <element signature="n#should_display_critical_message#1;n#MessengerTest#0;n#!!top" expanded="true" />
                     <element signature="n#should_display_error_message#1;n#MessengerTest#0;n#!!top" expanded="true" />
                     <element signature="n#should_display_error_message#1;n#MessengerTest#0;n#!!top" expanded="true" />
                     <element signature="n#should_display_success_message_and_label#0;n#MessengerTest#0;n#!!top" expanded="true" />
@@ -109,8 +96,6 @@
                     <element signature="n#should_display_warning_message_and_label#0;n#MessengerTest#0;n#!!top" expanded="true" />
                     <element signature="n#should_display_warn_message#0;n#MessengerTest#0;n#!!top" expanded="true" />
                     <element signature="n#should_display_warn_message_and_label#0;n#MessengerTest#0;n#!!top" expanded="true" />
-                    <element signature="n#should_display_important_message#0;n#MessengerTest#0;n#!!top" expanded="true" />
-                    <element signature="n#should_display_important_message_and_label#0;n#MessengerTest#0;n#!!top" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -138,8 +123,8 @@
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/phpunit.xml" />
-        <option value="$PROJECT_DIR$/src/Messenger.php" />
         <option value="$PROJECT_DIR$/tests/Unit/MessengerTest.php" />
+        <option value="$PROJECT_DIR$/src/Messenger.php" />
       </list>
     </option>
   </component>
@@ -306,7 +291,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1551038095690</updated>
-      <workItem from="1551038098234" duration="8502000" />
+      <workItem from="1551038098234" duration="8828000" />
     </task>
     <servers />
   </component>
@@ -319,7 +304,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8502000" />
+    <option name="totallyTimeSpent" value="8828000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="0" />
@@ -407,10 +392,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Unit/MessengerTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
+          <folding>
+            <element signature="n#setUp#0;n#MessengerTest#0;n#!!top" expanded="true" />
+            <element signature="n#should_return_module_package_name#0;n#MessengerTest#0;n#!!top" expanded="true" />
+            <element signature="n#should_#0;n#MessengerTest#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Messenger.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="102" column="88" selection-start-line="102" selection-start-column="88" selection-end-line="102" selection-end-column="88" />
+        <state relative-caret-position="204">
+          <caret line="127" column="22" selection-start-line="127" selection-start-column="22" selection-end-line="127" selection-end-column="22" />
           <folding>
             <element signature="e#178#220#0#PHP" expanded="true" />
             <element signature="e#2134#2220#0#PHP" expanded="true" />
@@ -424,36 +421,6 @@
             <element signature="e#4357#4567#0#PHP" expanded="true" />
             <element signature="e#4573#4777#0#PHP" expanded="true" />
             <element signature="e#4783#4997#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Unit/MessengerTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="142" lean-forward="true" selection-start-line="142" selection-end-line="142" />
-          <folding>
-            <element signature="e#7#42#0#PHP" expanded="true" />
-            <element signature="n#setUp#0;n#MessengerTest#0;n#!!top" expanded="true" />
-            <element signature="n#should_return_module_package_name#0;n#MessengerTest#0;n#!!top" expanded="true" />
-            <element signature="n#should_display_log_message#0;n#MessengerTest#0;n#!!top" expanded="true" />
-            <element signature="n#should_display_log_message#1;n#MessengerTest#0;n#!!top" expanded="true" />
-            <element signature="n#should_display_log_message#1;n#MessengerTest#0;n#!!top" expanded="true" />
-            <element signature="n#should_display_info_message#1;n#MessengerTest#0;n#!!top" expanded="true" />
-            <element signature="n#should_display_debug_message#0;n#MessengerTest#0;n#!!top" expanded="true" />
-            <element signature="n#should_display_debug_message#1;n#MessengerTest#0;n#!!top" expanded="true" />
-            <element signature="n#should_display_debug_message#1;n#MessengerTest#0;n#!!top" expanded="true" />
-            <element signature="n#should_display_critical_message#1;n#MessengerTest#0;n#!!top" expanded="true" />
-            <element signature="n#should_display_critical_message#1;n#MessengerTest#0;n#!!top" expanded="true" />
-            <element signature="n#should_display_error_message#1;n#MessengerTest#0;n#!!top" expanded="true" />
-            <element signature="n#should_display_error_message#1;n#MessengerTest#0;n#!!top" expanded="true" />
-            <element signature="n#should_display_success_message_and_label#0;n#MessengerTest#0;n#!!top" expanded="true" />
-            <element signature="n#should_display_warning_message#0;n#MessengerTest#0;n#!!top" expanded="true" />
-            <element signature="n#should_display_warning_message_and_label#0;n#MessengerTest#0;n#!!top" expanded="true" />
-            <element signature="n#should_display_warn_message#0;n#MessengerTest#0;n#!!top" expanded="true" />
-            <element signature="n#should_display_warn_message_and_label#0;n#MessengerTest#0;n#!!top" expanded="true" />
-            <element signature="n#should_display_important_message#0;n#MessengerTest#0;n#!!top" expanded="true" />
-            <element signature="n#should_display_important_message_and_label#0;n#MessengerTest#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
