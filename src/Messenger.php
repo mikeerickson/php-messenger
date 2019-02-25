@@ -3,6 +3,8 @@
 namespace Codedungeon\PHPMessenger;
 
 
+use Codedungeon\PHPCliColors\Color;
+
 /**
  * Class Messenger
  * @package Codedungeon\PHPMessenger
@@ -10,18 +12,21 @@ namespace Codedungeon\PHPMessenger;
 class Messenger
 {
 
+    protected $colors;
+
     /**
      * Messenger constructor.
      */
     public function __construct()
     {
-
+        $this->colors = new Color();
     }
 
     /**
      * @return string
      */
-    public function packageName() {
+    public function packageName()
+    {
         $content = file_get_contents($this->getPackageRoot() . DIRECTORY_SEPARATOR . 'composer.json');
         if ($content) {
             $content = json_decode($content, true);
@@ -46,10 +51,10 @@ class Messenger
      */
     public function getConfigurationFile($configFileName = 'php-messenger.yml')
     {
-        $defaultConfigFilename = $this->getPackageRoot() . DIRECTORY_SEPARATOR . 'src/' .$configFileName;
+        $defaultConfigFilename = $this->getPackageRoot() . DIRECTORY_SEPARATOR . 'src/' . $configFileName;
 
         $configPath = getcwd();
-        $filename   = '';
+        $filename = '';
 
         $continue = true;
         while (!file_exists($filename) && $continue) {
@@ -85,5 +90,103 @@ class Messenger
         }
     }
 
+    public function isTesting($key = "APP_ENV")
+    {
+        return $_ENV[$key] === "testing";
+    }
+
+    // -------------------------------------------------------------------------------------
+    // Messenger commands
+    // -------------------------------------------------------------------------------------
+
+    public function build_message($type = "log", $msg = "", $label = "")
+    {
+        if (strlen($label) > 0) {
+            return $label . " " . $msg;
+        } else {
+            return $msg;
+        }
+    }
+
+    public function log($msg = "", $label = "")
+    {
+        $msg = $this->build_message("log", $msg, $label);
+        if (!$this->isTesting()) {
+            echo $msg;
+        }
+        return $msg;
+    }
+
+    public function info($msg = "", $label = "")
+    {
+        $msg = $this->build_message("info", $msg, $label);
+        if (!$this->isTesting()) {
+            echo $msg;
+        }
+        return $msg;
+    }
+
+    public function debug($msg = "", $label = "")
+    {
+        $msg = $this->build_message("debug", $msg, $label);
+        if (!$this->isTesting()) {
+            echo $msg;
+        }
+        return $msg;
+    }
+
+    public function critical($msg = "", $label = "")
+    {
+        $msg = $this->build_message("critical", $msg, $label);
+        if (!$this->isTesting()) {
+            echo $msg;
+        }
+        return $msg;
+    }
+
+    public function error($msg = "", $label = "")
+    {
+        $msg = $this->build_message("error", $msg, $label);
+        if (!$this->isTesting()) {
+            echo $msg;
+        }
+        return $msg;
+    }
+
+    public function success($msg = "", $label = "")
+    {
+        $msg = $this->build_message("success", $msg, $label);
+        if (!$this->isTesting()) {
+            echo $msg;
+        }
+        return $msg;
+    }
+
+    public function warning($msg = "", $label = "")
+    {
+        $msg = $this->build_message("warning", $msg, $label);
+        if (!$this->isTesting()) {
+            echo $msg;
+        }
+        return $msg;
+    }
+
+    public function warn($msg = "", $label = "")
+    {
+        $msg = $this->build_message("warn", $msg, $label);
+        if (!$this->isTesting()) {
+            echo $msg;
+        }
+        return $msg;
+    }
+
+    public function important($msg = "", $label = "")
+    {
+        $msg = $this->build_message("important", $msg, $label);
+        if (!$this->isTesting()) {
+            echo $msg;
+        }
+        return $msg;
+    }
 
 }
