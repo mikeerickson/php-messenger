@@ -11,8 +11,13 @@ use Codedungeon\PHPCliColors\Color;
  */
 class Messenger
 {
-
+    /**
+     * @var Color
+     */
     protected $colors;
+
+    private $foreground_colors = [];
+    private $background_colors = [];
 
     /**
      * Messenger constructor.
@@ -20,6 +25,36 @@ class Messenger
     public function __construct()
     {
         $this->colors = new Color();
+
+        // Set up shell colors
+        $this->foreground_colors['black'] = '0;30';
+        $this->foreground_colors['dark_gray'] = '1;30';
+        $this->foreground_colors['blue'] = '0;34';
+        $this->foreground_colors['light_blue'] = '1;34';
+        $this->foreground_colors['green'] = '0;32';
+        $this->foreground_colors['light_green'] = '1;32';
+        $this->foreground_colors['cyan'] = '0;36';
+        $this->foreground_colors['light_cyan'] = '1;36';
+        $this->foreground_colors['red'] = '0;31';
+        $this->foreground_colors['light_red'] = '1;31';
+        $this->foreground_colors['purple'] = '0;35';
+        $this->foreground_colors['light_purple'] = '1;35';
+        $this->foreground_colors['brown'] = '0;33';
+        $this->foreground_colors['yellow'] = '1;33';
+        $this->foreground_colors['light_gray'] = '0;37';
+        $this->foreground_colors['white'] = '1;37';
+
+        $this->background_colors['black'] = '40';
+        $this->background_colors['red'] = '41';
+        $this->background_colors['green'] = '42';
+        $this->background_colors['yellow'] = '43';
+        $this->background_colors['blue'] = '44';
+        $this->background_colors['magenta'] = '45';
+        $this->background_colors['cyan'] = '46';
+        $this->background_colors['light_gray'] = '47';
+
+        echo $this->getColoredString(" TEST ", "black", "green") . " " . $this->getColoredString("Test Message",
+                "green") . "\n";
     }
 
     /**
@@ -91,11 +126,54 @@ class Messenger
     }
 
 
+    /**
+     * @param string $key
+     * @return bool
+     */
     public function isTesting($key = "APP_ENV")
     {
+        return false;
         return $_ENV[$key] === "testing";
     }
 
+
+    // Returns all foreground color names
+    public function getForegroundColors()
+    {
+        return array_keys($this->foreground_colors);
+    }
+
+    // Returns all background color names
+    public function getBackgroundColors()
+    {
+        return array_keys($this->background_colors);
+    }
+
+    // Returns colored string
+    public function getColoredString($string, $foreground_color = null, $background_color = null)
+    {
+        $colored_string = "";
+
+        // Check if given foreground color found
+        if (isset($this->foreground_colors[$foreground_color])) {
+            $colored_string .= "\033[" . $this->foreground_colors[$foreground_color] . "m";
+        }
+        // Check if given background color found
+        if (isset($this->background_colors[$background_color])) {
+            $colored_string .= "\033[" . $this->background_colors[$background_color] . "m";
+        }
+
+        // Add string and end coloring
+        $colored_string .= $string . "\033[0m";
+
+        return $colored_string;
+    }
+
+    /**
+     * @param string $msgType
+     * @param string $colorType
+     * @return mixed
+     */
     private function get_color($msgType = "", $colorType = "fg")
     {
         switch ($msgType) {
@@ -115,7 +193,7 @@ class Messenger
                 $color = $colorType === "bg" ? $this->colors::BG_RED : $this->colors::RED;
                 break;
             case "success":
-                $color = $colorType === "bg" ? $this->colors::BG_GREEN : $this->colors::GREEN;
+                $color = $colorType === "bg" ? "green" : "green";
                 break;
             case "warning":
                 $color = $colorType === "bg" ? $this->colors::BG_YELLOW : $this->colors::YELLOW;
@@ -126,6 +204,12 @@ class Messenger
             case "important":
                 $color = $colorType === "bg" ? $this->colors::BG_MAGENTA : $this->colors::MAGENTA;
                 break;
+            case "status":
+                $color = $colorType === "bg" ? $this->colors::BG_MAGENTA : $this->colors::MAGENTA;
+                break;
+            case "notice":
+                $color = $colorType === "bg" ? $this->colors::BG_BLUE : $this->colors::BLUE;
+                break;
         }
 
         return $color;
@@ -135,16 +219,32 @@ class Messenger
     // Messenger commands
     // -------------------------------------------------------------------------------------
 
+    /**
+     * @param string $type
+     * @param string $msg
+     * @param string $label
+     * @return string
+     */
     public function build_message($type = "log", $msg = "", $label = "")
     {
+
+        $label_fg = $this->colors::BLACK;
+        if ($type === "success") {
+            $label_fg = $this->colors::WHITE;
+        }
         if (strlen($label) > 0) {
-            return $this->get_color($type,
-                    "bg") . " " . $label . " " . $this->get_color($type, "fg") . " " . $msg . $this->colors::RESET;
+            return $this->getColoredString(" " . $label . " ", "black", "green") . " " . $this->getColoredString($msg,
+                    "green") . "\n";
         } else {
-            return $this->get_color($type, "fg") . $msg . $this->colors::RESET;
+            return $this->getColoredString($msg, "green");
         }
     }
 
+    /**
+     * @param string $msg
+     * @param string $label
+     * @return string
+     */
     public function log($msg = "", $label = "")
     {
         $msg = $this->build_message("log", $msg, $label);
@@ -154,6 +254,11 @@ class Messenger
         return $msg;
     }
 
+    /**
+     * @param string $msg
+     * @param string $label
+     * @return string
+     */
     public function info($msg = "", $label = "")
     {
         $msg = $this->build_message("info", $msg, $label);
@@ -163,6 +268,11 @@ class Messenger
         return $msg;
     }
 
+    /**
+     * @param string $msg
+     * @param string $label
+     * @return string
+     */
     public function debug($msg = "", $label = "")
     {
         $msg = $this->build_message("debug", $msg, $label);
@@ -172,6 +282,11 @@ class Messenger
         return $msg;
     }
 
+    /**
+     * @param string $msg
+     * @param string $label
+     * @return string
+     */
     public function critical($msg = "", $label = "")
     {
         $msg = $this->build_message("critical", $msg, $label);
@@ -181,6 +296,11 @@ class Messenger
         return $msg;
     }
 
+    /**
+     * @param string $msg
+     * @param string $label
+     * @return string
+     */
     public function error($msg = "", $label = "")
     {
         $msg = $this->build_message("error", $msg, $label);
@@ -190,6 +310,11 @@ class Messenger
         return $msg;
     }
 
+    /**
+     * @param string $msg
+     * @param string $label
+     * @return string
+     */
     public function success($msg = "", $label = "")
     {
         $msg = $this->build_message("success", $msg, $label);
@@ -199,6 +324,11 @@ class Messenger
         return $msg;
     }
 
+    /**
+     * @param string $msg
+     * @param string $label
+     * @return string
+     */
     public function warning($msg = "", $label = "")
     {
         $msg = $this->build_message("warning", $msg, $label);
@@ -208,6 +338,11 @@ class Messenger
         return $msg;
     }
 
+    /**
+     * @param string $msg
+     * @param string $label
+     * @return string
+     */
     public function warn($msg = "", $label = "")
     {
         $msg = $this->build_message("warn", $msg, $label);
@@ -217,6 +352,11 @@ class Messenger
         return $msg;
     }
 
+    /**
+     * @param string $msg
+     * @param string $label
+     * @return string
+     */
     public function important($msg = "", $label = "")
     {
         $msg = $this->build_message("important", $msg, $label);
@@ -225,5 +365,34 @@ class Messenger
         }
         return $msg;
     }
+
+    /**
+     * @param string $msg
+     * @param string $label
+     * @return string
+     */
+    public function status($msg = "", $label = "")
+    {
+        $msg = $this->build_message("status", $msg, $label);
+        if (!$this->isTesting()) {
+            echo $msg;
+        }
+        return $msg;
+    }
+
+    /**
+     * @param string $msg
+     * @param string $label
+     * @return string
+     */
+    public function notice($msg = "", $label = "")
+    {
+        $msg = $this->build_message("notice", $msg, $label);
+        if (!$this->isTesting()) {
+            echo $msg;
+        }
+        return $msg;
+    }
+
 
 }

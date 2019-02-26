@@ -146,10 +146,10 @@ class MessengerTest extends PHPUnit\Framework\TestCase
      */
     public function should_display_success_message_and_label()
     {
-        $msg = $this->messenger->success("success", "label");
+        $msg = $this->messenger->success("Success Message", "LABEL");
 
 
-        $expect = $this->colors::BG_GREEN . " label " . $this->colors->green() . " success" . $this->colors::RESET;
+        $expect = $this->colors::BG_GREEN . " LABEL " . $this->colors->green() . " success" . $this->colors::RESET;
         $this->assertEquals($expect, $msg);
     }
 

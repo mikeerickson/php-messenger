@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdc4c822-f0b9-4564-9042-5c82fb3bb5b1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.phpunit.result.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.phpunit.result.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Messenger.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Messenger.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/MessengerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/MessengerTest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -10,7 +12,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="FileColors">
@@ -20,95 +22,58 @@
     <fileColor scope="Non-Project Files (Material Palenight)" color="4E5579" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/tests/Unit/MessengerTest.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="227">
-                  <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
-                  <folding>
-                    <element signature="n#setUp#0;n#MessengerTest#0;n#!!top" expanded="true" />
-                    <element signature="n#should_return_module_package_name#0;n#MessengerTest#0;n#!!top" expanded="true" />
-                    <element signature="n#should_#0;n#MessengerTest#0;n#!!top" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/Messenger.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="204">
-                  <caret line="127" column="22" selection-start-line="127" selection-start-column="22" selection-end-line="127" selection-end-column="22" />
-                  <folding>
-                    <element signature="e#178#220#0#PHP" expanded="true" />
-                    <element signature="e#2134#2220#0#PHP" expanded="true" />
-                    <element signature="e#2704#3075#0#PHP" expanded="true" />
-                    <element signature="e#3081#3283#0#PHP" expanded="true" />
-                    <element signature="e#3289#3493#0#PHP" expanded="true" />
-                    <element signature="e#3499#3705#0#PHP" expanded="true" />
-                    <element signature="e#3711#3923#0#PHP" expanded="true" />
-                    <element signature="e#3929#4135#0#PHP" expanded="true" />
-                    <element signature="e#4141#4351#0#PHP" expanded="true" />
-                    <element signature="e#4357#4567#0#PHP" expanded="true" />
-                    <element signature="e#4573#4777#0#PHP" expanded="true" />
-                    <element signature="e#4783#4997#0#PHP" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/tests/HeartbeatTest.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="288">
-                  <caret line="12" selection-start-line="12" selection-end-line="12" />
-                  <folding>
-                    <element signature="n#HeartbeatTest#0;n#!!top" expanded="true" />
-                    <element signature="n#should_pass_heartbeat_test#0;n#HeartbeatTest#0;n#!!top" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/tests/Unit/MessengerTest.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1164">
-                  <caret line="142" lean-forward="true" selection-start-line="142" selection-end-line="142" />
-                  <folding>
-                    <element signature="e#7#42#0#PHP" expanded="true" />
-                    <element signature="n#setUp#0;n#MessengerTest#0;n#!!top" expanded="true" />
-                    <element signature="n#should_return_module_package_name#0;n#MessengerTest#0;n#!!top" expanded="true" />
-                    <element signature="n#should_display_log_message#1;n#MessengerTest#0;n#!!top" expanded="true" />
-                    <element signature="n#should_display_info_message#1;n#MessengerTest#0;n#!!top" expanded="true" />
-                    <element signature="n#should_display_debug_message#1;n#MessengerTest#0;n#!!top" expanded="true" />
-                    <element signature="n#should_display_error_message#1;n#MessengerTest#0;n#!!top" expanded="true" />
-                    <element signature="n#should_display_error_message#1;n#MessengerTest#0;n#!!top" expanded="true" />
-                    <element signature="n#should_display_success_message_and_label#0;n#MessengerTest#0;n#!!top" expanded="true" />
-                    <element signature="n#should_display_warning_message#0;n#MessengerTest#0;n#!!top" expanded="true" />
-                    <element signature="n#should_display_warning_message_and_label#0;n#MessengerTest#0;n#!!top" expanded="true" />
-                    <element signature="n#should_display_warn_message#0;n#MessengerTest#0;n#!!top" expanded="true" />
-                    <element signature="n#should_display_warn_message_and_label#0;n#MessengerTest#0;n#!!top" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tests/Unit/MessengerTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="148" column="57" selection-start-line="148" selection-start-column="57" selection-end-line="148" selection-end-column="57" />
+              <folding>
+                <element signature="e#7#42#0#PHP" expanded="true" />
+                <element signature="n#setUp#0;n#MessengerTest#0;n#!!top" expanded="true" />
+                <element signature="n#should_return_module_package_name#0;n#MessengerTest#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Messenger.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="232" column="45" lean-forward="true" selection-start-line="232" selection-start-column="45" selection-end-line="232" selection-end-column="45" />
+              <folding>
+                <element signature="e#347#1875#0#PHP" expanded="true" />
+                <element signature="e#5007#6731#0#PHP" expanded="true" />
+                <element signature="e#9200#9410#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/HeartbeatTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
+              <folding>
+                <element signature="n#HeartbeatTest#0;n#!!top" expanded="true" />
+                <element signature="n#should_pass_heartbeat_test#0;n#HeartbeatTest#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>success</find>
       <find>&quot;test&quot;</find>
+      <find>&quot;log&quot;</find>
+      <find>get_color</find>
+      <find>&quot;success&quot;</find>
+      <find>build</find>
+      <find>success</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -123,8 +88,8 @@
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/phpunit.xml" />
-        <option value="$PROJECT_DIR$/tests/Unit/MessengerTest.php" />
         <option value="$PROJECT_DIR$/src/Messenger.php" />
+        <option value="$PROJECT_DIR$/tests/Unit/MessengerTest.php" />
       </list>
     </option>
   </component>
@@ -292,6 +257,7 @@
       <option name="presentableId" value="Default" />
       <updated>1551038095690</updated>
       <workItem from="1551038098234" duration="8828000" />
+      <workItem from="1551111046069" duration="3946000" />
     </task>
     <servers />
   </component>
@@ -304,21 +270,15 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8828000" />
+    <option name="totallyTimeSpent" value="12774000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" weight="0.24959612" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Tail" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.44394618" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32884902" />
@@ -326,20 +286,23 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Remote Host" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Tail" order="7" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Database Changes" order="10" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.28550074" />
+      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Remote Host" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tests/Unit/MessengerTest.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/phpunit/phpunit/tests/unit/Framework/Constraint/ExceptionMessageTest.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -364,17 +327,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/HeartbeatTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="n#HeartbeatTest#0;n#!!top" expanded="true" />
-            <element signature="n#should_pass_heartbeat_test#0;n#HeartbeatTest#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
@@ -392,35 +344,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Unit/MessengerTest.php">
+    <entry file="file://$PROJECT_DIR$/tests/HeartbeatTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
+        <state relative-caret-position="72">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
           <folding>
-            <element signature="n#setUp#0;n#MessengerTest#0;n#!!top" expanded="true" />
-            <element signature="n#should_return_module_package_name#0;n#MessengerTest#0;n#!!top" expanded="true" />
-            <element signature="n#should_#0;n#MessengerTest#0;n#!!top" expanded="true" />
+            <element signature="n#HeartbeatTest#0;n#!!top" expanded="true" />
+            <element signature="n#should_pass_heartbeat_test#0;n#HeartbeatTest#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Messenger.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="127" column="22" selection-start-line="127" selection-start-column="22" selection-end-line="127" selection-end-column="22" />
+        <state relative-caret-position="105">
+          <caret line="232" column="45" lean-forward="true" selection-start-line="232" selection-start-column="45" selection-end-line="232" selection-end-column="45" />
           <folding>
-            <element signature="e#178#220#0#PHP" expanded="true" />
-            <element signature="e#2134#2220#0#PHP" expanded="true" />
-            <element signature="e#2704#3075#0#PHP" expanded="true" />
-            <element signature="e#3081#3283#0#PHP" expanded="true" />
-            <element signature="e#3289#3493#0#PHP" expanded="true" />
-            <element signature="e#3499#3705#0#PHP" expanded="true" />
-            <element signature="e#3711#3923#0#PHP" expanded="true" />
-            <element signature="e#3929#4135#0#PHP" expanded="true" />
-            <element signature="e#4141#4351#0#PHP" expanded="true" />
-            <element signature="e#4357#4567#0#PHP" expanded="true" />
-            <element signature="e#4573#4777#0#PHP" expanded="true" />
-            <element signature="e#4783#4997#0#PHP" expanded="true" />
+            <element signature="e#347#1875#0#PHP" expanded="true" />
+            <element signature="e#5007#6731#0#PHP" expanded="true" />
+            <element signature="e#9200#9410#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Unit/MessengerTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="148" column="57" selection-start-line="148" selection-start-column="57" selection-end-line="148" selection-end-column="57" />
+          <folding>
+            <element signature="e#7#42#0#PHP" expanded="true" />
+            <element signature="n#setUp#0;n#MessengerTest#0;n#!!top" expanded="true" />
+            <element signature="n#should_return_module_package_name#0;n#MessengerTest#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
