@@ -1,6 +1,5 @@
 <?php
 
-use Codedungeon\PHPCliColors\Color;
 use Codedungeon\PHPMessenger\Messenger;
 
 /**
@@ -15,14 +14,10 @@ class MessengerTest extends PHPUnit\Framework\TestCase
      */
     protected $messenger;
 
-    protected $colors;
-
 
     public function setUp(): void
     {
         $this->messenger = new Messenger();
-
-        $this->colors = new Color();
     }
 
     /** @test */
@@ -48,156 +43,232 @@ class MessengerTest extends PHPUnit\Framework\TestCase
 
     }
 
-    /** @test */
+
+    // -------------------------------------------------------
+    // Class message tests
+    // -------------------------------------------------------
+
+
+    /** @test
+     */
     public function should_display_log_message()
     {
-        $msg = $this->messenger->log("log", "");
+        $msg = $this->messenger->log("Log message", "");
 
-        $this->assertEquals($this->colors->white() . "log" . $this->colors->reset(), $msg);
-    }
-
-    /** @test */
-    public function should_display_log_message_and_label()
-    {
-        $msg = $this->messenger->log("log", "label");
-
-        $this->assertEquals("label log", $msg);
-    }
-
-
-    /** @test */
-    public function should_display_info_message()
-    {
-        $msg = $this->messenger->info("info", "");
-
-        $this->assertEquals("info", $msg);
-    }
-
-    /** @test */
-    public function should_display_info_message_and_label()
-    {
-        $msg = $this->messenger->info("info", "label");
-
-        $this->assertEquals("label info", $msg);
-    }
-
-    /** @test */
-    public function should_display_debug_message()
-    {
-        $msg = $this->messenger->debug("debug", "");
-
-        $this->assertEquals("debug", $msg);
-    }
-
-    /** @test */
-    public function should_display_debug_message_and_label()
-    {
-        $msg = $this->messenger->debug("debug", "label");
-
-        $this->assertEquals("label debug", $msg);
-    }
-
-    /** @test */
-    public function should_display_critical_message()
-    {
-        $msg = $this->messenger->critical("critical", "");
-
-        $this->assertEquals("critical", $msg);
-    }
-
-    /** @test */
-    public function should_display_critical_message_and_label()
-    {
-        $msg = $this->messenger->critical("critical", "label");
-
-        $this->assertEquals("label critical", $msg);
-    }
-
-    /** @test */
-    public function should_display_error_message()
-    {
-        $msg = $this->messenger->error("error", "");
-
-        $this->assertEquals("error", $msg);
-    }
-
-    /** @test */
-    public function should_display_error_message_and_label()
-    {
-        $msg = $this->messenger->error("error", "label");
-
-        $this->assertEquals("label error", $msg);
-    }
-
-    /**
-     * @test
-     * @group color
-     */
-    public function should_display_success_message()
-    {
-        $msg = $this->messenger->success("success", "");
-
-        $expect = $this->colors::GREEN . "success" . $this->colors::RESET;
+        $expect = $this->messenger->build_message("log", "Log message");
         $this->assertEquals($expect, $msg);
     }
 
     /** @test
-     * @group color
      */
-    public function should_display_success_message_and_label()
+    public function should_display_log_message_and_label()
     {
-        $msg = $this->messenger->success("Success Message", "LABEL");
+        $msg = $this->messenger->log("Log Message", "LOG");
+
+        $this->assertStringContainsString(" LOG ", $msg);
+        $this->assertStringContainsString("Log Message", $msg);
+    }
 
 
-        $expect = $this->colors::BG_GREEN . " LABEL " . $this->colors->green() . " success" . $this->colors::RESET;
+    /** @test
+     */
+    public function should_display_info_message()
+    {
+        $msg = $this->messenger->info("Info message", "");
+
+        $expect = $this->messenger->build_message("info", "Info message");
         $this->assertEquals($expect, $msg);
     }
 
-    /** @test */
+    /** @test
+     */
+    public function should_display_info_message_and_label()
+    {
+        $msg = $this->messenger->info("Info Message", "INFO");
+
+        $this->assertStringContainsString(" INFO ", $msg);
+        $this->assertStringContainsString("Info Message", $msg);
+    }
+
+    /** @test
+     */
+    public function should_display_debug_message()
+    {
+        $msg = $this->messenger->debug("Debug message", "");
+
+        $expect = $this->messenger->build_message("debug", "Debug message");
+        $this->assertEquals($expect, $msg);
+    }
+
+    /** @test
+     */
+    public function should_display_debug_message_and_label()
+    {
+        $msg = $this->messenger->debug("Debug Message", "DEBUG");
+
+        $this->assertStringContainsString(" DEBUG ", $msg);
+        $this->assertStringContainsString("Debug Message", $msg);
+    }
+
+    /** @test
+     */
+    public function should_display_critical_message()
+    {
+        $msg = $this->messenger->critical("Critical message", "");
+
+        $expect = $this->messenger->build_message("critical", "Critical message");
+        $this->assertEquals($expect, $msg);
+    }
+
+    /** @test
+     */
+    public function should_display_critical_message_and_label()
+    {
+        $msg = $this->messenger->critical("Critical Message", "CRITICAL");
+
+        $this->assertStringContainsString(" CRITICAL ", $msg);
+        $this->assertStringContainsString("Critical Message", $msg);
+    }
+
+    /** @test
+     */
+    public function should_display_error_message()
+    {
+        $msg = $this->messenger->error("Error message", "");
+
+        $expect = $this->messenger->build_message("error", "Error message");
+        $this->assertEquals($expect, $msg);
+    }
+
+    /** @test
+     */
+    public function should_display_error_message_and_label()
+    {
+        $msg = $this->messenger->error("Error Message", "ERROR");
+
+        $this->assertStringContainsString(" ERROR ", $msg);
+        $this->assertStringContainsString("Error Message", $msg);
+    }
+
+    /**
+     * @test
+     */
+    public function should_display_success_message()
+    {
+        $msg = $this->messenger->success("Success message", "");
+
+        $expect = $this->messenger->build_message("success", "Success message");
+        $this->assertEquals($expect, $msg);
+    }
+
+    /** @test
+     */
+    public function should_display_success_message_and_label()
+    {
+        $msg = $this->messenger->success("Success Message", "SUCCESS");
+
+        $this->assertStringContainsString(" SUCCESS ", $msg);
+        $this->assertStringContainsString("Success Message", $msg);
+    }
+
+    /** @test
+     */
     public function should_display_warning_message()
     {
-        $msg = $this->messenger->warning("warning", "");
+        $msg = $this->messenger->warning("Warning message", "");
 
-        $this->assertEquals("warning", $msg);
+        $expect = $this->messenger->build_message("warning", "Warning message");
+        $this->assertEquals($expect, $msg);
     }
 
-    /** @test */
+    /** @test
+     */
     public function should_display_warning_message_and_label()
     {
-        $msg = $this->messenger->warning("warning", "label");
+        $msg = $this->messenger->warning("Warning Message", "WARNING");
 
-        $this->assertEquals("label warning", $msg);
+        $this->assertStringContainsString(" WARNING ", $msg);
+        $this->assertStringContainsString("Warning Message", $msg);
     }
 
-    /** @test */
+    /** @test
+     */
     public function should_display_warn_message()
     {
-        $msg = $this->messenger->warn("warn", "");
+        $msg = $this->messenger->warn("Warn message", "");
 
-        $this->assertEquals("warn", $msg);
+        $expect = $this->messenger->build_message("warn", "Warn message");
+        $this->assertEquals($expect, $msg);
     }
 
-    /** @test */
+    /** @test
+     */
     public function should_display_warn_message_and_label()
     {
-        $msg = $this->messenger->warn("warn", "label");
+        $msg = $this->messenger->warn("Warn Message", "WARN");
 
-        $this->assertEquals("label warn", $msg);
+        $this->assertStringContainsString(" WARN ", $msg);
+        $this->assertStringContainsString("Warn Message", $msg);
     }
 
-    /** @test */
+    /** @test
+     */
     public function should_display_important_message()
     {
-        $msg = $this->messenger->important("important", "");
+        $msg = $this->messenger->important("Important message", "");
 
-        $this->assertEquals("important", $msg);
+        $expect = $this->messenger->build_message("important", "Important message");
+        $this->assertEquals($expect, $msg);
     }
 
-    /** @test */
+    /** @test
+     */
     public function should_display_important_message_and_label()
     {
-        $msg = $this->messenger->important("important", "label");
+        $msg = $this->messenger->important("Important Message", "IMPORTANT");
 
-        $this->assertEquals("label important", $msg);
+        $this->assertStringContainsString(" IMPORTANT ", $msg);
+        $this->assertStringContainsString("Important Message", $msg);
+    }
+
+    /** @test
+     */
+    public function should_display_notice_message()
+    {
+        $msg = $this->messenger->notice("Notices message", "");
+
+        $expect = $this->messenger->build_message("notice", "Notices message");
+        $this->assertEquals($expect, $msg);
+    }
+
+    /** @test
+     */
+    public function should_display_notice_message_and_label()
+    {
+        $msg = $this->messenger->notice("Notice Message", "NOTICE");
+
+        $this->assertStringContainsString(" NOTICE ", $msg);
+        $this->assertStringContainsString("Notice Message", $msg);
+    }
+
+    /** @test
+     */
+    public function should_display_status_message()
+    {
+        $msg = $this->messenger->status("Status message", "");
+
+        $expect = $this->messenger->build_message("status", "Status message");
+        $this->assertEquals($expect, $msg);
+    }
+
+    /** @test
+     */
+    public function should_display_status_message_and_label()
+    {
+        $msg = $this->messenger->status("Status Message", "STATUS");
+
+        $this->assertStringContainsString(" STATUS ", $msg);
+        $this->assertStringContainsString("Status Message", $msg);
+
     }
 }

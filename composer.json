@@ -9,7 +9,7 @@
         "phpunit/phpunit": "^8.0",
         "codedungeon/phpunit-result-printer": "^0.26.0",
         "spatie/phpunit-watcher": "^1.8",
-        "codedungeon/php-cli-colors": "^1.10"
+        "orchestra/testbench": "~3.0"
     },
     "license": "MIT",
     "authors": [
