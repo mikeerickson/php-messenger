@@ -55,7 +55,7 @@ class MessengerTest extends PHPUnit\Framework\TestCase
     {
         $msg = $this->messenger->log("Log message", "");
 
-        $expect = $this->messenger->build_message("log", "Log message");
+        $expect = $this->messenger->buildMessage("log", "Log message");
         $this->assertEquals($expect, $msg);
     }
 
@@ -76,7 +76,7 @@ class MessengerTest extends PHPUnit\Framework\TestCase
     {
         $msg = $this->messenger->info("Info message", "");
 
-        $expect = $this->messenger->build_message("info", "Info message");
+        $expect = $this->messenger->buildMessage("info", "Info message");
         $this->assertEquals($expect, $msg);
     }
 
@@ -96,7 +96,7 @@ class MessengerTest extends PHPUnit\Framework\TestCase
     {
         $msg = $this->messenger->debug("Debug message", "");
 
-        $expect = $this->messenger->build_message("debug", "Debug message");
+        $expect = $this->messenger->buildMessage("debug", "Debug message");
         $this->assertEquals($expect, $msg);
     }
 
@@ -116,7 +116,7 @@ class MessengerTest extends PHPUnit\Framework\TestCase
     {
         $msg = $this->messenger->critical("Critical message", "");
 
-        $expect = $this->messenger->build_message("critical", "Critical message");
+        $expect = $this->messenger->buildMessage("critical", "Critical message");
         $this->assertEquals($expect, $msg);
     }
 
@@ -136,7 +136,7 @@ class MessengerTest extends PHPUnit\Framework\TestCase
     {
         $msg = $this->messenger->error("Error message", "");
 
-        $expect = $this->messenger->build_message("error", "Error message");
+        $expect = $this->messenger->buildMessage("error", "Error message");
         $this->assertEquals($expect, $msg);
     }
 
@@ -157,7 +157,7 @@ class MessengerTest extends PHPUnit\Framework\TestCase
     {
         $msg = $this->messenger->success("Success message", "");
 
-        $expect = $this->messenger->build_message("success", "Success message");
+        $expect = $this->messenger->buildMessage("success", "Success message");
         $this->assertEquals($expect, $msg);
     }
 
@@ -177,7 +177,7 @@ class MessengerTest extends PHPUnit\Framework\TestCase
     {
         $msg = $this->messenger->warning("Warning message", "");
 
-        $expect = $this->messenger->build_message("warning", "Warning message");
+        $expect = $this->messenger->buildMessage("warning", "Warning message");
         $this->assertEquals($expect, $msg);
     }
 
@@ -197,7 +197,7 @@ class MessengerTest extends PHPUnit\Framework\TestCase
     {
         $msg = $this->messenger->warn("Warn message", "");
 
-        $expect = $this->messenger->build_message("warn", "Warn message");
+        $expect = $this->messenger->buildMessage("warn", "Warn message");
         $this->assertEquals($expect, $msg);
     }
 
@@ -217,7 +217,7 @@ class MessengerTest extends PHPUnit\Framework\TestCase
     {
         $msg = $this->messenger->important("Important message", "");
 
-        $expect = $this->messenger->build_message("important", "Important message");
+        $expect = $this->messenger->buildMessage("important", "Important message");
         $this->assertEquals($expect, $msg);
     }
 
@@ -237,7 +237,7 @@ class MessengerTest extends PHPUnit\Framework\TestCase
     {
         $msg = $this->messenger->notice("Notices message", "");
 
-        $expect = $this->messenger->build_message("notice", "Notices message");
+        $expect = $this->messenger->buildMessage("notice", "Notices message");
         $this->assertEquals($expect, $msg);
     }
 
@@ -257,7 +257,7 @@ class MessengerTest extends PHPUnit\Framework\TestCase
     {
         $msg = $this->messenger->status("Status message", "");
 
-        $expect = $this->messenger->build_message("status", "Status message");
+        $expect = $this->messenger->buildMessage("status", "Status message");
         $this->assertEquals($expect, $msg);
     }
 
@@ -270,5 +270,16 @@ class MessengerTest extends PHPUnit\Framework\TestCase
         $this->assertStringContainsString(" STATUS ", $msg);
         $this->assertStringContainsString("Status Message", $msg);
 
+    }
+
+    /** @test
+     * @group note
+     */
+    public function should_display_note_message()
+    {
+        $msg = $this->messenger->note("Note message", "");
+
+        $expect = $this->messenger->buildMessage("note", "Note message");
+        $this->assertEquals($expect, $msg);
     }
 }

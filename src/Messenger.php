@@ -11,7 +11,9 @@ class Messenger
     /**
      * @var array
      */
+
     private $foreground_colors = [];
+
     /**
      * @var array
      */
@@ -25,6 +27,7 @@ class Messenger
 
         // Set up shell colors
         $this->foreground_colors['black'] = '0;30';
+        $this->foreground_colors['critical'] = '1;30';
         $this->foreground_colors['dark_gray'] = '1;90';
         $this->foreground_colors['blue'] = '0;34';
         $this->foreground_colors['light_blue'] = '1;34';
@@ -37,15 +40,18 @@ class Messenger
         $this->foreground_colors['purple'] = '0;35';
         $this->foreground_colors['light_purple'] = '1;35';
         $this->foreground_colors['brown'] = '0;33';
-        $this->foreground_colors['yellow'] = '1;33';
+        $this->foreground_colors['yellow'] = '0;33';
         $this->foreground_colors['light_gray'] = '0;37';
         $this->foreground_colors['white'] = '1;37';
         $this->foreground_colors['magenta'] = '0;35';
+        $this->foreground_colors['blood'] = '1;91';
+        $this->foreground_colors['orange'] = '1;38';
 
 //        const GRAY = "\033[0;90m";
         $this->background_colors['black'] = '40';
         $this->background_colors['dark_gray'] = '1;47';
         $this->background_colors['red'] = '41';
+        $this->background_colors['light_red'] = '41';
         $this->background_colors['green'] = '42';
         $this->background_colors['yellow'] = '43';
         $this->background_colors['blue'] = '44';
@@ -53,6 +59,8 @@ class Messenger
         $this->background_colors['cyan'] = '46';
         $this->background_colors['light_gray'] = '47';
         $this->background_colors['white'] = '37';
+        $this->background_colors['blood'] = '101';
+        $this->background_colors['orange'] = '1;48';
     }
 
     /**
@@ -130,7 +138,7 @@ class Messenger
      */
     public function isTesting($key = "APP_ENV")
     {
-        return $_ENV[$key] === "testing";
+        return getenv("testing") === "testing";
     }
 
 
@@ -199,7 +207,7 @@ class Messenger
                 $color = "dark_gray"; // dark_gray not working for label background
                 break;
             case "critical":
-                $color = "red";
+                $color = "blood";
                 break;
             case "error":
                 $color = "red";
@@ -219,6 +227,9 @@ class Messenger
             case "status":
                 $color = "magenta";
                 break;
+            case "note":
+                $color = "yellow";
+                break;
             case "notice":
                 $color = "blue";
                 break;
@@ -237,12 +248,13 @@ class Messenger
      * @param string $label
      * @return string
      */
-    public function build_message($type = "log", $msg = "", $label = "")
+    public function buildMessage($type = "log", $msg = "", $label = "")
     {
         $color = $this->getColor($type);
+        $label_fg = ($type === "critical") ? "critical" : "black";
 
         if (strlen($label) > 0) {
-            return $this->getColoredString(" " . $label . " ", "black", $color) . " " . $this->getColoredString($msg,
+            return $this->getColoredString(" " . $label . " ", $label_fg, $color) . " " . $this->getColoredString($msg,
                     $color);
         } else {
             return $this->getColoredString($msg, $color);
@@ -256,7 +268,7 @@ class Messenger
      */
     public function log($msg = "", $label = "")
     {
-        $msg = $this->build_message("log", $msg, $label);
+        $msg = $this->buildMessage("log", $msg, $label);
         if (!$this->isTesting()) {
             echo $msg . PHP_EOL;
         }
@@ -270,7 +282,7 @@ class Messenger
      */
     public function info($msg = "", $label = "")
     {
-        $msg = $this->build_message("info", $msg, $label);
+        $msg = $this->buildMessage("info", $msg, $label);
         if (!$this->isTesting()) {
             echo $msg . PHP_EOL;
         }
@@ -284,7 +296,7 @@ class Messenger
      */
     public function debug($msg = "", $label = "")
     {
-        $msg = $this->build_message("debug", $msg, $label);
+        $msg = $this->buildMessage("debug", $msg, $label);
         if (!$this->isTesting()) {
             echo $msg . PHP_EOL;
         }
@@ -298,7 +310,7 @@ class Messenger
      */
     public function critical($msg = "", $label = "")
     {
-        $msg = $this->build_message("critical", $msg, $label);
+        $msg = $this->buildMessage("critical", $msg, $label);
         if (!$this->isTesting()) {
             echo $msg . PHP_EOL;
         }
@@ -312,7 +324,7 @@ class Messenger
      */
     public function error($msg = "", $label = "")
     {
-        $msg = $this->build_message("error", $msg, $label);
+        $msg = $this->buildMessage("error", $msg, $label);
         if (!$this->isTesting()) {
             echo $msg . PHP_EOL;
         }
@@ -326,7 +338,7 @@ class Messenger
      */
     public function success($msg = "", $label = "")
     {
-        $msg = $this->build_message("success", $msg, $label);
+        $msg = $this->buildMessage("success", $msg, $label);
         if (!$this->isTesting()) {
             echo $msg . PHP_EOL;
         }
@@ -340,7 +352,7 @@ class Messenger
      */
     public function warning($msg = "", $label = "")
     {
-        $msg = $this->build_message("warning", $msg, $label);
+        $msg = $this->buildMessage("warning", $msg, $label);
         if (!$this->isTesting()) {
             echo $msg . PHP_EOL;
         }
@@ -354,7 +366,7 @@ class Messenger
      */
     public function warn($msg = "", $label = "")
     {
-        $msg = $this->build_message("warn", $msg, $label);
+        $msg = $this->buildMessage("warn", $msg, $label);
         if (!$this->isTesting()) {
             echo $msg . PHP_EOL;
         }
@@ -368,7 +380,7 @@ class Messenger
      */
     public function important($msg = "", $label = "")
     {
-        $msg = $this->build_message("important", $msg, $label);
+        $msg = $this->buildMessage("important", $msg, $label);
         if (!$this->isTesting()) {
             echo $msg . PHP_EOL;
         }
@@ -382,7 +394,7 @@ class Messenger
      */
     public function status($msg = "", $label = "")
     {
-        $msg = $this->build_message("status", $msg, $label);
+        $msg = $this->buildMessage("status", $msg, $label);
         if (!$this->isTesting()) {
             echo $msg . PHP_EOL;
         }
@@ -396,12 +408,29 @@ class Messenger
      */
     public function notice($msg = "", $label = "")
     {
-        $msg = $this->build_message("notice", $msg, $label);
+        $msg = $this->buildMessage("notice", $msg, $label);
         if (!$this->isTesting()) {
             echo $msg . PHP_EOL;
         }
         return $msg;
     }
 
+    /**
+     * @param string $msg
+     * @param string $label
+     * @return string
+     */
+    public function note($msg = "", $label = "")
+    {
+        $msg = $this->buildMessage("warning", $msg, $label);
+        if (!$this->isTesting()) {
+            echo $msg . PHP_EOL;
+        }
+        return $msg;
+    }
 
+    public static function test()
+    {
+        echo "test";
+    }
 }
