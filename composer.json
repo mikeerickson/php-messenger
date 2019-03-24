@@ -1,6 +1,6 @@
 {
     "name": "codedungeon/php-messenger",
-    "version": "0.0.2",
+    "version": "1.0.0",
     "description": "PHP library for creating console messages",
     "type": "library",
     "require": {
@@ -25,12 +25,12 @@
     },
     "scripts": {
         "test": "vendor/bin/phpunit --colors=always",
-        "test-unit": "vendor/bin/phpunit --colors=always --testsuite=Unit"
+        "test:unit": "vendor/bin/phpunit --colors=always --testsuite=Unit"
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Codedungeon\\PHPMessenger\\MessengerServiceProvider"
+                "Codedungeon\\PHPMessenger\\ServiceProvider"
             ],
             "aliases": {
                 "Messenger": "Codedungeon\\PHPMessenger\\Facades\\Messenger"

@@ -2,13 +2,11 @@
 
 namespace Codedungeon\PHPMessenger;
 
-use Illuminate\Support\ServiceProvider;
-
 /**
  * Class MessengerServiceProvider
  * @package Codedungeon\PHPMessenger
  */
-class MessengerServiceProvider extends ServiceProvider
+class ServiceProvider extends ServiceProvider
 {
     public function boot()
     {

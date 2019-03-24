@@ -1,19 +1,26 @@
 {
   "name": "php-messenger",
   "version": "1.0.0",
-  "description": "## Description",
+  "description": "PHP Messenger (Workflow Utilities)",
   "main": "index.js",
   "directories": {
     "test": "tests"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "vendor/bin/phpunit --colors=always",
+    "test:unit": "vendor/bin/phpunit --colors=always --testsuite=Unit"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mikeerickson/php-messenger.git"
   },
-  "keywords": [],
+  "keywords": [
+    "codedungeon",
+    "php",
+    "laravel",
+    "laravel-zero",
+    "messenger"
+  ],
   "author": "Mike Erickson <codedungeon@gmail.com> (https://github.com/mikeerickson)",
   "license": "MIT",
   "bugs": {

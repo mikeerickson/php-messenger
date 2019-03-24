@@ -3,3 +3,5 @@ logs/
 *.log
 *.taskpaper
 .idea/
+node_modules/
+.phpunit.result.cache
