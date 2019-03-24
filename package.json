@@ -1,0 +1,23 @@
+{
+  "name": "php-messenger",
+  "version": "1.0.0",
+  "description": "## Description",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikeerickson/php-messenger.git"
+  },
+  "keywords": [],
+  "author": "Mike Erickson <codedungeon@gmail.com> (https://github.com/mikeerickson)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mikeerickson/php-messenger/issues"
+  },
+  "homepage": "https://github.com/mikeerickson/php-messenger#readme"
+}
