@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdc4c822-f0b9-4564-9042-5c82fb3bb5b1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/messenger.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.phpunit.result.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.phpunit.result.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MessengerServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/MessengerServiceProvider.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +27,7 @@
         <entry file="file://$PROJECT_DIR$/src/Messenger.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="130">
-              <caret line="86" column="5" lean-forward="true" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
+              <caret line="86" column="5" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
               <folding>
                 <element signature="e#321#2180#0#PHP" expanded="true" />
                 <element signature="e#7020#7476#0#PHP" expanded="true" />
@@ -70,7 +65,7 @@
         <entry file="file://$PROJECT_DIR$/composer.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="27" column="73" lean-forward="true" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="73" />
+              <caret line="27" column="73" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="73" />
             </state>
           </provider>
         </entry>
@@ -88,7 +83,7 @@
         <entry file="file://$PROJECT_DIR$/phpunit.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="665">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
             </state>
           </provider>
         </entry>
@@ -97,16 +92,16 @@
         <entry file="file://$PROJECT_DIR$/messenger.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
-              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+              <caret line="36" selection-start-line="36" selection-end-line="36" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+        <entry file="file://$PROJECT_DIR$/src/MessengerServiceProvider.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="310">
+              <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -151,7 +146,6 @@
         <option value="$PROJECT_DIR$/src/Facades/MessengerFacade.php" />
         <option value="$PROJECT_DIR$/tests/Unit/MessengerTest.php" />
         <option value="$PROJECT_DIR$/src/Facades/Messenger.php" />
-        <option value="$PROJECT_DIR$/src/MessengerServiceProvider.php" />
         <option value="$PROJECT_DIR$/tests/Unit/MessengerServiceProviderTest.php" />
         <option value="$PROJECT_DIR$/src/Messenger.php" />
         <option value="$PROJECT_DIR$/README.md" />
@@ -161,6 +155,7 @@
         <option value="$PROJECT_DIR$/examples/messenger.php" />
         <option value="$PROJECT_DIR$/messenger.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/MessengerServiceProvider.php" />
       </list>
     </option>
   </component>
@@ -276,13 +271,12 @@
             <path>
               <item name="php-messenger" type="b2602c69:ProjectViewProjectNode" />
               <item name="php-messenger" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="php-messenger" type="b2602c69:ProjectViewProjectNode" />
               <item name="php-messenger" type="462c0819:PsiDirectoryNode" />
               <item name="tests" type="462c0819:PsiDirectoryNode" />
-              <item name="Unit" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -357,7 +351,7 @@
       <workItem from="1551388400187" duration="3281000" />
       <workItem from="1553123508258" duration="592000" />
       <workItem from="1553380490851" duration="149000" />
-      <workItem from="1553449109848" duration="5573000" />
+      <workItem from="1553449109848" duration="6497000" />
     </task>
     <servers />
   </component>
@@ -373,7 +367,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40823000" />
+    <option name="totallyTimeSpent" value="41747000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="0" />
@@ -465,20 +459,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="10" column="30" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="30" />
-          <folding>
-            <element signature="e#164#441#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Messenger.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
-          <caret line="86" column="5" lean-forward="true" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
+          <caret line="86" column="5" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
           <folding>
             <element signature="e#321#2180#0#PHP" expanded="true" />
             <element signature="e#7020#7476#0#PHP" expanded="true" />
@@ -510,7 +494,7 @@
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="27" column="73" lean-forward="true" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="73" />
+          <caret line="27" column="73" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="73" />
         </state>
       </provider>
     </entry>
@@ -524,7 +508,7 @@
     <entry file="file://$PROJECT_DIR$/phpunit.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="665">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
@@ -554,17 +538,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/messenger.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
           <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/messenger.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MessengerServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
         </state>
       </provider>
     </entry>
