@@ -1,6 +1,6 @@
 {
   "name": "php-messenger",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "PHP Messenger (Workflow Utilities)",
   "main": "index.js",
   "directories": {

@@ -24,7 +24,7 @@ composer require codedungeon/php-messenger
 	```php
 	   'providers' => [
             ...
-			Codedungeon\PHPMessenger\ServiceProvider::class,
+			Codedungeon\PHPMessenger\MessengerServiceProvider::class,
 			...
 	```
 	
@@ -35,7 +35,7 @@ composer require codedungeon/php-messenger
 	```php
 	    'aliases' => [
     	...
-            'Messenger' => Codedungeon\PHPMessenger\ServiceProvider::class,
+            'Messenger' => Codedungeon\PHPMessenger\MessengerServiceProvider::class,
 		...
 	```
 
