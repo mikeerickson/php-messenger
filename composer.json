@@ -1,6 +1,6 @@
 {
     "name": "codedungeon/php-messenger",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "PHP library for creating console messages",
     "type": "library",
     "require": {
