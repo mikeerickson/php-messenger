@@ -4,7 +4,7 @@
 
 PHP Messenger provides a suite of routine which can be used in CLI based applications, providing a simple consistent interface, taking care of all the colorizing for you.
 
-![Screenshot](https://raw.githubusercontent.com/mikeerickson/php-messenger/docs/messenger-example.png)
+![Screenshot](https://github.com/mikeerickson/php-messenger/blob/master/docs/messenger-example.png)
 
 #### Using with Laravel Commands and Laravel-Zero
 In addition, PHP Messenger can also be used with CLI applications created with Laravel Commands or Laravel-Zero, using the Laravel facades interface.
