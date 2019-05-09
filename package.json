@@ -7,6 +7,7 @@
     "test": "tests"
   },
   "scripts": {
+    "publish": "./tasks/publish.sh",
     "test": "vendor/bin/phpunit --colors=always",
     "test:unit": "vendor/bin/phpunit --colors=always --testsuite=Unit"
   },
