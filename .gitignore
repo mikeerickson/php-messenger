@@ -3,5 +3,6 @@ logs/
 *.log
 *.taskpaper
 .idea/
+.vscode/
 node_modules/
 .phpunit.result.cache
