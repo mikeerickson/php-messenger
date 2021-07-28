@@ -137,7 +137,7 @@ Messenger::version() -> returns current package version
 
 ### License
 
-Copyright &copy; 2019 Mike Erickson
+Copyright &copy; 2019-2020 Mike Erickson
 Released under the MIT license
 
 ## Credits

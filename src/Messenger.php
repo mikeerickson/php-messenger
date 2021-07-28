@@ -68,7 +68,7 @@ class Messenger
      */
     public function packageName()
     {
-        $content = file_get_contents($this->getPackageRoot() . DIRECTORY_SEPARATOR . 'composer.json');
+        $content = file_get_contents($this->getPackageRoot().DIRECTORY_SEPARATOR.'composer.json');
         if ($content) {
             $content = json_decode($content, true);
 
@@ -92,14 +92,14 @@ class Messenger
      */
     public function getConfigurationFile($configFileName = 'php-messenger.yml')
     {
-        $defaultConfigFilename = $this->getPackageRoot() . DIRECTORY_SEPARATOR . 'src/' . $configFileName;
+        $defaultConfigFilename = $this->getPackageRoot().DIRECTORY_SEPARATOR.'src/'.$configFileName;
 
         $configPath = getcwd();
         $filename = '';
 
         $continue = true;
         while (!file_exists($filename) && $continue) {
-            $filename = $configPath . DIRECTORY_SEPARATOR . $configFileName;
+            $filename = $configPath.DIRECTORY_SEPARATOR.$configFileName;
             if (($this->isWindows() && \strlen($configPath) === 3) || $configPath === '/') {
                 $filename = $defaultConfigFilename;
                 $continue = false;
@@ -123,7 +123,7 @@ class Messenger
      */
     public function version()
     {
-        $content = file_get_contents($this->getPackageRoot() . DIRECTORY_SEPARATOR . 'composer.json');
+        $content = file_get_contents($this->getPackageRoot().DIRECTORY_SEPARATOR.'composer.json');
         if ($content) {
             $content = json_decode($content, true);
             return isset($content['version']) ? $content['version'] : '<unknown>';
@@ -177,15 +177,15 @@ class Messenger
 
         // Check if given foreground color found
         if (isset($this->foreground_colors[$foreground_color])) {
-            $colored_string .= "\033[" . $this->foreground_colors[$foreground_color] . "m";
+            $colored_string .= "\033[".$this->foreground_colors[$foreground_color]."m";
         }
         // Check if given background color found
         if (isset($this->background_colors[$background_color])) {
-            $colored_string .= "\033[" . $this->background_colors[$background_color] . "m";
+            $colored_string .= "\033[".$this->background_colors[$background_color]."m";
         }
 
         // Add string and end coloring
-        $colored_string .= $string . "\033[0m";
+        $colored_string .= $string."\033[0m";
 
         return $colored_string;
     }
@@ -255,10 +255,10 @@ class Messenger
         $label_fg = ($type === "critical") ? "critical" : "black";
 
         if (strlen($label) > 0) {
-            return $this->getColoredString(" " . $label . " ", $label_fg, $color) . " " . $this->getColoredString(
-                $msg,
-                $color
-            );
+            return $this->getColoredString(" ".$label." ", $label_fg, $color)." ".$this->getColoredString(
+                    $msg,
+                    $color
+                );
         } else {
             return $this->getColoredString($msg, $color);
         }
@@ -273,7 +273,7 @@ class Messenger
     {
         $msg = $this->buildMessage("log", $msg, $label);
         if (!$this->isTesting()) {
-            echo $msg . PHP_EOL;
+            echo $msg.PHP_EOL;
         }
         return $msg;
     }
@@ -287,7 +287,7 @@ class Messenger
     {
         $msg = $this->buildMessage("info", $msg, $label);
         if (!$this->isTesting()) {
-            echo $msg . PHP_EOL;
+            echo $msg.PHP_EOL;
         }
         return $msg;
     }
@@ -301,7 +301,7 @@ class Messenger
     {
         $msg = $this->buildMessage("debug", $msg, $label);
         if (!$this->isTesting()) {
-            echo $msg . PHP_EOL;
+            echo $msg.PHP_EOL;
         }
         return $msg;
     }
@@ -315,7 +315,7 @@ class Messenger
     {
         $msg = $this->buildMessage("critical", $msg, $label);
         if (!$this->isTesting()) {
-            echo $msg . PHP_EOL;
+            echo $msg.PHP_EOL;
         }
         return $msg;
     }
@@ -329,7 +329,7 @@ class Messenger
     {
         $msg = $this->buildMessage("error", $msg, $label);
         if (!$this->isTesting()) {
-            echo $msg . PHP_EOL;
+            echo $msg.PHP_EOL;
         }
         return $msg;
     }
@@ -343,7 +343,7 @@ class Messenger
     {
         $msg = $this->buildMessage("success", $msg, $label);
         if (!$this->isTesting()) {
-            echo $msg . PHP_EOL;
+            echo $msg.PHP_EOL;
         }
         return $msg;
     }
@@ -357,7 +357,7 @@ class Messenger
     {
         $msg = $this->buildMessage("warning", $msg, $label);
         if (!$this->isTesting()) {
-            echo $msg . PHP_EOL;
+            echo $msg.PHP_EOL;
         }
         return $msg;
     }
@@ -371,7 +371,7 @@ class Messenger
     {
         $msg = $this->buildMessage("warn", $msg, $label);
         if (!$this->isTesting()) {
-            echo $msg . PHP_EOL;
+            echo $msg.PHP_EOL;
         }
         return $msg;
     }
@@ -385,7 +385,7 @@ class Messenger
     {
         $msg = $this->buildMessage("important", $msg, $label);
         if (!$this->isTesting()) {
-            echo $msg . PHP_EOL;
+            echo $msg.PHP_EOL;
         }
         return $msg;
     }
@@ -399,7 +399,7 @@ class Messenger
     {
         $msg = $this->buildMessage("status", $msg, $label);
         if (!$this->isTesting()) {
-            echo $msg . PHP_EOL;
+            echo $msg.PHP_EOL;
         }
         return $msg;
     }
@@ -413,7 +413,7 @@ class Messenger
     {
         $msg = $this->buildMessage("notice", $msg, $label);
         if (!$this->isTesting()) {
-            echo $msg . PHP_EOL;
+            echo $msg.PHP_EOL;
         }
         return $msg;
     }
@@ -427,13 +427,8 @@ class Messenger
     {
         $msg = $this->buildMessage("warning", $msg, $label);
         if (!$this->isTesting()) {
-            echo $msg . PHP_EOL;
+            echo $msg.PHP_EOL;
         }
         return $msg;
-    }
-
-    public static function test()
-    {
-        echo "test";
     }
 }

@@ -14,7 +14,6 @@ class MessengerTest extends PHPUnit\Framework\TestCase
      */
     protected $messenger;
 
-
     public function setUp(): void
     {
         $this->messenger = new Messenger();

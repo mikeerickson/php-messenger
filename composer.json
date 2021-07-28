@@ -1,12 +1,12 @@
 {
   "name": "codedungeon/php-messenger",
-  "version": "1.0.5",
+  "version": "1.1.1",
   "description": "PHP library for creating console messages",
   "type": "library",
   "require": {},
   "require-dev": {
+    "codedungeon/phpunit-result-printer": "^0.27",
     "phpunit/phpunit": "^8.0",
-    "codedungeon/phpunit-result-printer": "^0.26.0",
     "spatie/phpunit-watcher": "^1.8",
     "orchestra/testbench": "~3.0"
   },
